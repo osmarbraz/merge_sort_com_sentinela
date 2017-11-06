@@ -12,10 +12,10 @@ public class Principal {
 
     /**
      * Realiza o merge com sentinela.
-     * @param A vetor a ser ordenado
-     * @param p 
-     * @param q
-     * @param r 
+     * @param A Vetor a ser ordenado
+     * @param q Pivo do vetor
+     * @param p Inicio do vetor
+     * @param r Fim do vetor     
      */
     public static void merge(int A[], int p, int q, int r) {
         int n1 = q - p + 1;
