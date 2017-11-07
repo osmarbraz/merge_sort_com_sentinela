@@ -54,7 +54,12 @@ public class Principal {
     }
 
     /**
-     * Mergesort com sentinela
+     * Mergesort com sentinela.
+     * Algoritmos de ordenação podem ser ou não in-place ou estáveis.
+     * Um método de ordenação é estável se elementos iguais ocorrem no 
+     * vetor ordenado na mesma ordem em que são passados na entrada.
+     * O mergesort é estável. 
+     * 
      * T(n) = T(n/2) + T(n/2) + Theta(n)
      * Complexidade no pior caso é Theta(n^2)
      * Complexidade no caso médio/esperado é Theta(n log n)
