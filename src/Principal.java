@@ -12,6 +12,7 @@ public class Principal {
 
     /**
      * Realiza o merge com sentinela.
+     * Em comentario o algoritmo orginal
      * @param A Vetor a ser ordenado
      * @param q Pivo do vetor
      * @param p Inicio do vetor
