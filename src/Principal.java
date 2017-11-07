@@ -56,6 +56,7 @@ public class Principal {
      * Mergesort com sentinela
      * T(n) = T(n/2) + T(n/2) + Theta(n)
      * Complexidade no pior caso é Theta(n^2)
+     * Complexidade no caso médio/esperado é Theta(n log n)
      * @param A Vetor a ser ordenado
      * @param p Inicio do vetor
      * @param r Fim do vetor
