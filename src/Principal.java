@@ -19,19 +19,21 @@ public class Principal {
      * @param r Fim do vetor     
      */
     public static void merge(int A[], int p, int q, int r) {
-        int n1 = q - p + 1;
-        int n2 = r - q;
-        int L[] = new int[n1 + 1];
-        int R[] = new int[n2 + 1];
+        int n1 = q - p + 1; // Tamanho do início (p) até o pivô (q)
+        int n2 = r - q; // Tamanho do pivô (q) até o final (r)
+        int L[] = new int[n1 + 1]; // n1 + 1 elementos, indexados de 0..n1
+        int R[] = new int[n2 + 1]; // n2 + 1 elementos, indexados de 0..n2
 
+        // Inicializa L com a primeira parte do vetor A
         for (int i = 0; i < n1; i++) {
             //L[i] = A[p+i-1];
             L[i] = A[p + i];
         }
 
+        // Inicializa R com a segunda parte do vetor A
         for (int j = 0; j < n2; j++) {
             //R[j] = A[q+j];
-            R[j] = A[q + j + 1];
+            R[j] = A[(q + 1) + j]; //(q + 1) -> após o pivô
         }
         //Original 
         //L[n1+1] = Integer.MAX_VALUE;
@@ -79,8 +81,8 @@ public class Principal {
     public static void main(String args[]) {
         //Vetor dos dados    
         int A[] = {50, 70, 60, 90, 10, 30, 20, 40};
-        
-        //Fim do vetor
+                
+        //Apesar de haver n elementos, r é o ÍNDICE, logo, n-1 é a sua posição!
         int n = A.length - 1;
 
         System.out.println(">>> MergeSort <<<");
