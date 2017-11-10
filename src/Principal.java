@@ -8,6 +8,9 @@
  * Mergesort com sentinela
  */
 
+/**
+ * @author Osmar de Oliveira Braz Junior
+ */
 public class Principal {
 
     /**
