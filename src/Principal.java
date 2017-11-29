@@ -25,7 +25,9 @@ public class Principal {
 
     /**
      * O piso (= floor) de um número real x é o resultado do arredondamento de x
-     * para baixo. Em outras palavras, o piso de x é o único número inteiro i
+     * para baixo. 
+     * 
+     * Em outras palavras, o piso de x é o único número inteiro i
      * tal que i<=x<i+1. Ex. O piso de 3.9 é 3.
      *
      * Em java pode ser utilizando Math.floor(double)
@@ -45,7 +47,11 @@ public class Principal {
     
     /**
      * Realiza o merge com sentinela.
-     * Em comentario o algoritmo orginal
+     * 
+     * Consumo de tempo Theta(n)
+     * 
+     * Em comentario está as linhas do do algoritmo orginal.
+     * 
      * @param A Vetor a ser ordenado
      * @param q Pivô do vetor
      * @param p Inicio do vetor
@@ -83,6 +89,7 @@ public class Principal {
 
     /**
      * Mergesort com sentinela.
+     * 
      * Algoritmos de ordenação podem ser ou não in-place ou estáveis.
      * Um método de ordenação é estável se elementos iguais ocorrem no 
      * vetor ordenado na mesma ordem em que são passados na entrada.
@@ -91,6 +98,7 @@ public class Principal {
      * T(n) = T(n/2) + T(n/2) + Theta(n)
      * Complexidade no pior caso é Theta(n^2)
      * Complexidade no caso médio/esperado é Theta(n log n)
+     * 
      * @param A Vetor a ser ordenado
      * @param p Inicio do vetor
      * @param r Fim do vetor
@@ -98,8 +106,8 @@ public class Principal {
     public static void mergesort(int A[], int p, int r) {
         if (p < r) {                            //Theta(1)                
             int q = piso((p + r) / 2);          //Theta(1)
-            mergesort(A, p, q);                 //T(n/2)
-            mergesort(A, q + 1, r);             //T(n/2)
+            mergesort(A, p, q);                 //T(teto(n/2))
+            mergesort(A, q + 1, r);             //T(piso(n/2))
             merge(A, p, q, r);                  //Theta(n)
         }
     }
